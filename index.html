@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Springfield Tax Multiservice | Elite</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #e63946; /* Rojo Vibrante */
+            --secondary: #1d3557; /* Azul Profundo */
+            --accent: #f1faee;
+            --gold: #ffb703;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        /* Barra de Navegación */
+        nav {
+            background: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--secondary);
+        }
+
+        .logo span { color: var(--primary); }
+
+        /* Sección Hero (Portada) */
+        .hero {
+            background: linear-gradient(rgba(29, 53, 87, 0.8), rgba(29, 53, 87, 0.8)), 
+                        url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 { font-size: 3rem; margin-bottom: 10px; text-transform: uppercase; }
+        .award-badge { 
+            background: var(--gold); 
+            padding: 5px 15px; 
+            border-radius: 20px; 
+            color: #000; 
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        /* Contenedor Principal */
+        .container { max-width: 1200px; margin: auto; padding: 50px 20px; }
+
+        /* Grid de Servicios */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-bottom: 5px solid var(--primary);
+            transition: 0.3s;
+        }
+
+        .card:hover { transform: translateY(-10px); }
+        .card i { font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; }
+        .card h3 { color: var(--secondary); margin-bottom: 15px; }
+        
+        .card ul { list-style: none; padding: 0; }
+        .card li { margin-bottom: 10px; display: flex; align-items: center; }
+        .card li::before { 
+            content: "\f00c"; font-family: "Font Awesome 5 Free"; font-weight: 900;
+            margin-right: 10px; color: #4caf50;
+        }
+
+        /* Información de Contacto y Mapa */
+        .info-section {
+            background: var(--secondary);
+            color: white;
+            padding: 60px 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            align-items: center;
+        }
+
+        .contact-details h2 { color: var(--gold); }
+        .contact-item { margin-bottom: 20px; font-size: 1.1rem; }
+        .contact-item i { margin-right: 15px; color: var(--gold); }
+
+        .map-container {
+            border-radius: 15px;
+            overflow: hidden;
+            height: 300px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        /* Footer */
+        footer { background: #111; color: white; text-align: center; padding: 20px; }
+
+        /* Botón Flotante de WhatsApp o Teléfono */
+        .fab {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            text-decoration: none;
+            z-index: 1000;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">SPRINGFIELD <span>TAX</span></div>
+        <div><i class="fa-solid fa-clock"></i> Lun-Vie: 9AM - 6PM</div>
+    </nav>
+
+    <section class="hero">
+        <div class="award-badge"><i class="fa-solid fa-trophy"></i> TOP 3 FRANCONIA AWARD 2025</div>
+        <h1>Asesoría Legal y Tributaria</h1>
+        <p>Servicio experto para la comunidad Hispana en Virginia y Maryland</p>
+    </section>
+
+    <div class="container">
+        <div class="services-grid">
+            <div class="card">
+                <i class="fa-solid fa-file-invoice-dollar"></i>
+                <h3>Impuestos y IRS</h3>
+                <ul>
+                    <li>Impuestos Personales y de Negocios</li>
+                    <li>Tramitación de ITIN Number</li>
+                    <li>Enmiendas y Auditorías</li>
+                    <li>Arreglos de pago con IRS</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-passport"></i>
+                <h3>Trámites Migratorios</h3>
+                <ul>
+                    <li>Peticiones Familiares</li>
+                    <li>Renovación de DACA y Green Card</li>
+                    <li>Procesos de Ciudadanía</li>
+                    <li>Asilo Político</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-car"></i>
+                <h3>Licencias de Manejo</h3>
+                <ul>
+                    <li>Citas DMV (Virginia y Maryland)</li>
+                    <li>Clases Prácticas de Manejo</li>
+                    <li>Renta de Auto para Examen</li>
+                    <li>Registración de Vehículos</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-gavel"></i>
+                <h3>Servicios Legales</h3>
+                <ul>
+                    <li>Traducciones Certificadas</li>
+                    <li>Notaría Pública y Apostillados</li>
+                    <li>Divorcios de Mutuo Acuerdo</li>
+                    <li>Cartas de Poder</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <section class="info-section">
+        <div class="contact-details">
+            <h2>📍 Nuestra Ubicación</h2>
+            <div class="contact-item">
+                <i class="fa-solid fa-location-dot"></i>
+                6184 Grovedale Ct Suite 100, Alexandria, VA 22310
+            </div>
+            <div class="contact-item">
+                <i class="fa-solid fa-phone"></i>
+                <a href="tel:7038629548" style="color: white; text-decoration: none;">(703) 862-9548</a>
+            </div>
+            <div class="contact-item">
+                <i class="fa-solid fa-envelope"></i>
+                springfieldtaxm21@gmail.com
+            </div>
+            <div class="contact-item">
+                <i class="fa-solid fa-calendar-check"></i>
+                Enero - Abril: Atendemos con cita previa
+            </div>
+        </div>
+        
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3110.457805177309!2d-77.1278135!3d38.7761005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b2093557a26f%3A0x6334f5933227447e!2s6184%20Grovedale%20Ct%20%23100%2C%20Alexandria%2C%20VA%2022310!5e0!3m2!1ses!2sus!4v1700000000000!5m2!1ses!2sus" 
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+    </section>
+
+    <a href="tel:7038629548" class="fab">
+        <i class="fa-solid fa-phone"></i>
+    </a>
+
+    <footer>
+        <p>&copy; 2026 Springfield Tax Multiservice | Diseñado para la comunidad.</p>
+    </footer>
+
+</body>
+</html>
